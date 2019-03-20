@@ -26,7 +26,9 @@ app.use(
 
 app.setHandler({
     LAUNCH() {
-        return this.toIntent('HelloWorldIntent');
+      let expectedLaunchPrompt = 'Welcome to you RIM smart lock. Would you like to lock the door? Check the lock status? Or unlock the door?'
+      let expectedLaunchRePrompt = 'Please say lock door, status of my door, or unlock the door.'
+      this.ask(expectedLaunchPrompt, expectedLaunchRePrompt);
     },
 
     HelloWorldIntent() {

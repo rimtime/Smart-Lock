@@ -18,8 +18,6 @@ for (const p of [new Alexa(), new GoogleAssistant()]) {
             ).toBe(true);
 
         });
-    });
-    describe(`PLATFORM: ${p.constructor.name} INTENTS` , () => {
         test('should return the UNLOCKED status at "lockIntent"', async () => {
             const conversation = testSuite.conversation();
 
@@ -31,6 +29,7 @@ for (const p of [new Alexa(), new GoogleAssistant()]) {
 
         });
     });
+
 }
 
 let expectedLockPrompt = 'Your door is locked.'
